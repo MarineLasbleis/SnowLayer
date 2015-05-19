@@ -88,9 +88,6 @@ for ddy in np.linspace(-0.5,2,20):
     ax2.plot(phiVs,h)
 
 
-
-
-
 plt.show()
     
 #### Figures
