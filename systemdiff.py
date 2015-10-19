@@ -1,4 +1,4 @@
-# Time-stamp: <2015-10-14 10:12:42 marine>
+# Time-stamp: <2015-10-16 22:56:15 marine>
 ## Project : Snow in the F - layer
 ## Subproject : computation of the equilibrium state and stability of it
 ## Author : Marine Lasbleis
@@ -42,4 +42,7 @@ def systemTest3(t , y):
     return [y[1], 4*y[0]]
 
 def systemTest4(t , y):
-    return [1.,y[2],4*y[1]]
+    return [ 1., y[2], 4.*y[1] ]
+
+def systemTest5(t , y, a):
+    return a[0]+a[1]*t

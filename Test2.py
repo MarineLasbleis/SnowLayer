@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-15 16:06:22 marine>
+# Time-stamp: <2015-10-19 10:19:23 marine>
 ## Project : Snow in the F - layer
 ## Subproject : computation of the equilibrium state and stability of it
 ## Author : Marine Lasbleis
@@ -19,8 +19,10 @@ import eqResol
 from param import *
 
 
-
-
+test_fitddy=0  ! if 1, plot figures for testing the value of ddy
+figure=1
+geometry="cart"
+print geometry
 
 
 

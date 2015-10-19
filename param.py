@@ -1,4 +1,8 @@
-
+#!/usr/bin/python
+# Time-stamp: <2015-10-19 10:17:56 marine>
+## Project : Snow in the F - layer
+## Subproject : parameters file
+## Author : Marine Lasbleis
 
 #### Computation parameters
 
@@ -8,15 +12,9 @@ nst=100.;
 dt=(hmax-hmin)/nst
 AbsTol=1.e-10
 RelTol=1.e-12
-
 Nddy=30
-test_fitddy=0
-
-geometry="cart"
-print geometry
 
 
-figure=1
 
 #### Physical parameters
 
