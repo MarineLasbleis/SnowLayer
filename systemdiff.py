@@ -1,4 +1,4 @@
-# Time-stamp: <2015-10-16 22:56:15 marine>
+# Time-stamp: <2015-10-20 10:21:59 marine>
 ## Project : Snow in the F - layer
 ## Subproject : computation of the equilibrium state and stability of it
 ## Author : Marine Lasbleis
@@ -7,7 +7,7 @@
 ##  Definition of the system of differential equations to be solved
 
 
-def system_cart(t , y, P, Mx, Mp, V, G, Ric=6.):
+def cart(t , y, P, Mx, Mp, V, G, Ric=6.):
     """system of equation for the spatial evolution of snow inside the F-layer
     [dy0,dy1,dy2] = system(t , y, PeT, Mx, Mp, Veff, gamma)
     """
@@ -18,7 +18,7 @@ def system_cart(t , y, P, Mx, Mp, V, G, Ric=6.):
     return [ dy0 , dy1 , dy2 ]
 
 
-def system_spher(t , y, P, Mx, Mp, V, G, Ric=6.):
+def spher(t , y, P, Mx, Mp, V, G, Ric=6.):
     """system of equation for the spatial evolution of snow inside the F-layer - spherical case
     [dy0,dy1,dy2] = system(t , y, PeT, Mx, Mp, Veff, gamma)
     """

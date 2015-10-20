@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-19 10:17:56 marine>
+# Time-stamp: <2015-10-20 09:45:46 marine>
 ## Project : Snow in the F - layer
 ## Subproject : parameters file
 ## Author : Marine Lasbleis
@@ -32,6 +32,7 @@ k=1.8e-5
 Vs0=1.e-4
 rdot=1.e-11
 
+## Labrosse 2015
 K0 = 1403.e9
 Kprim0 = 3.567
 Lrho = 8039.e3
@@ -40,3 +41,7 @@ rho0=12451.
 
 gam=1.5
 TL0=5500
+
+
+rhoH = 12530
+rhoD = 12060

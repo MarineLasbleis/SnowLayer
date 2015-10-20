@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-19 10:19:23 marine>
+# Time-stamp: <2015-10-19 10:40:15 marine>
 ## Project : Snow in the F - layer
 ## Subproject : computation of the equilibrium state and stability of it
 ## Author : Marine Lasbleis
