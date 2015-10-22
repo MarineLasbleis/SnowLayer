@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-19 16:31:16 marine>
+# Time-stamp: <2015-10-21 14:07:27 marine>
 ## Project : Snow in the F - layer
 ## Subproject : seismic observations
 ## Author : Marine Lasbleis
@@ -168,4 +168,4 @@ def Figures_seism():
     axa[1,1].set_xlabel('r/r_icb')
     
    
-    plt.show()
+    #plt.show()
