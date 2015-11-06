@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-21 14:40:50 marine>
+# Time-stamp: <2015-11-05 22:31:11 marine>
 ## Project : Snow in the F - layer
 ## Subproject : computation of the equilibrium state and stability of it
 ## Author : Marine Lasbleis
@@ -41,8 +41,10 @@ except IOError as e:
 fig, (ax1,ax2) = plt.subplots(1, 2, sharey=True)
 fig5, ax5 = plt.subplots()
 figk, axk = plt.subplots()
+figk2, (axk1,axk2) = plt.subplots(1, 2, sharey=True)
 
-for k in k*np.linspace(0.1,1.5,10):
+
+for k in k*np.linspace(0.1,2.,10):
 
     PeT=Vs0*d/k
     PeX=Vs0*d/lambdaX
@@ -85,6 +87,11 @@ for k in k*np.linspace(0.1,1.5,10):
     rho, Vp = Resol.Vp_estimation(z,T,x,g)
     r=rICp+z
     axk.plot(z,Vp)
+
+    axk1.plot(x/X0,z/1.e3)
+    axk2.plot(phiVs,z/1.e3)
+
+Seismic_observations.plotVp(z+rICp,Vp)   
 
 
 

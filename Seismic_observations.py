@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-21 14:07:27 marine>
+# Time-stamp: <2015-11-05 10:27:50 marine>
 ## Project : Snow in the F - layer
 ## Subproject : seismic observations
 ## Author : Marine Lasbleis
@@ -169,3 +169,29 @@ def Figures_seism():
     
    
     #plt.show()
+
+
+
+
+def plotVp(z_,Vp_):
+
+    fig, ax = plt.subplots()
+
+    for fichier in ['F_layer_PREM.dat','F_layer_PREM2.dat','F_layer_AK135.dat']:
+
+
+        try:            
+            with open(fichier,'r') as file:
+                data=json.load(file)
+                hmin=data['hmin']
+                hmax=data['hmax']
+                radius=np.array(data['r'])[hmin:hmax]
+                Vp=np.array(data['Vp'])[hmin:hmax]
+                print file, radius[1], radius[-1]
+        except IOError as e:
+            print "Unable to open file", file,". Please check the function Load_PREM_AK1135_PREM2"
+
+        ax.plot(Vp/1e3,radius/param.rICp)
+
+
+    ax.plot(Vp_/1e3,z_/param.rICp)

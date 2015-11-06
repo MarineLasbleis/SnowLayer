@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-10-21 14:40:17 marine>
+# Time-stamp: <2015-11-05 10:26:37 marine>
 ## Project : Snow in the F - layer
 ## Subproject : parameters file
 ## Author : Marine Lasbleis
@@ -28,7 +28,7 @@ mp=9.e-9 # 9e-9
 mX=1.1e4#6000 # 1.1e4
 rho0=12530. #en kg.m-3
 lambdaX=1.e-9
-k=1.8e-5
+k=2.e-5
 Vs0=1.e-4
 rdot=1.e-11
 
