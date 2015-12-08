@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Time-stamp: <2015-11-05 10:27:50 marine>
+# Time-stamp: <2015-11-30 14:39:31 marine>
 ## Project : Snow in the F - layer
 ## Subproject : seismic observations
 ## Author : Marine Lasbleis
@@ -142,11 +142,12 @@ def Figures_seism():
                 hmax=data['hmax']
                 hmin=data['hmin']
                 
-                axa[0,0].plot(r,Vp)
-                axa[0,1].plot(r[hmin:hmax],Vp[hmin:hmax])
-                axa[0,2].plot(r, K)
-                axa[1,0].plot(r,rho)
-                axa[1,0].plot(r,rho)
+                axa[0,0].plot(r, Vp, label=fichier)
+                axa[0,1].plot(r[hmin:hmax], Vp[hmin:hmax], label=fichier)
+                axa[0,2].plot(r, K, label=fichier)
+                axa[1,0].plot(r, rho, label=fichier)
+                axa[1,1].plot(r, rho, label=fichier)
+               # axa[1,0].plot(r,rho)
                 
         except IOError as e:
             print "The data file does not exist. Please check for file ",files
@@ -157,15 +158,21 @@ def Figures_seism():
     axa[0,0].set_xlabel('r/r_icb')
     axa[0,1].set_title('ZOOM - Vp (m/s)')
     axa[0,1].set_xlabel('r/r_icb')
+    axa[0,1].axis([0.95,1.35,10200,10400])
     axa[0,2].set_title('Ks (Pa)')
     axa[0,2].scatter(1.,1.3047e12)
-    axa[0,2].axis([0.5,3.,0.9e12,1.8e12])
+    axa[0,2].axis([0.,2.,0.9e12,1.8e12])
     axa[1,0].set_title('Rho (kg/m^3)')
     axa[1,0].axis([0,2,11000.,13500.])
     axa[1,0].set_xlabel('r/r_icb')
     axa[1,1].set_title('ZOOM - Rho (kg/m^3)')
     axa[1,1].axis([0.95,1.35,11800.,12200.])
     axa[1,1].set_xlabel('r/r_icb')
+    axa[0,0].legend(prop={'size': 10})
+    axa[0,1].legend(prop={'size': 10})
+    axa[0,2].legend(prop={'size': 8})
+    axa[1,0].legend(prop={'size': 8})
+    axa[1,1].legend(prop={'size': 8})
     
    
     #plt.show()
